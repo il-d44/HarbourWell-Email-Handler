@@ -1,171 +1,165 @@
 [
-
-
-{
-  "service_name": "Hertford Wellbeing Centre",
-  "location": "Hertford",
-  "address": "1st Floor of the Seed Warehouse, The Wash, Hertford, SG14 1PX",
-  "email": "admin@mindinmidherts.org.uk",
-  "phone": "03303 208100",
-  "opening_hours": "Thursday 10am–2:30pm",
-  "weekly_groups": [
     {
-      "name": "Wellbeing Group (Morning)",
-      "day": "Thursday",
-      "time": "10:30am–12:00pm"
+        "service_name": "Hertford Wellbeing Centre",
+        "location": "Hertford",
+        "address": "1st Floor of the Seed Warehouse, The Wash, Hertford, SG14 1PX",
+        "email": "admin@mindinmidherts.org.uk",
+        "phone": "03303 208100",
+        "opening_hours": "Thursday 10am–2:30pm",
+        "weekly_groups": [
+            {
+                "name": "Wellbeing Group (Morning)",
+                "day": "Thursday",
+                "time": "10:30am–12:00pm"
+            },
+            {
+                "name": "Wellbeing Group (Afternoon)",
+                "day": "Thursday",
+                "time": "1:00pm–2:30pm"
+            }
+        ],
+        "services": [
+            "Social Support Groups",
+            "One-to-one consultations after referral"
+        ],
+        "referral_process": "Fill in a referral form. Once processed, you will be invited to a 1-to-1 consultation with a team member to discuss support options.",
+        "notes": [
+            "Centre closed on Bank Holiday Monday 26th May.",
+            "Nightlight Crisis Café in Hatfield is open Friday to Monday, 7pm to 1am. Call 01923 256391 for urgent support."
+        ]
     },
     {
-      "name": "Wellbeing Group (Afternoon)",
-      "day": "Thursday",
-      "time": "1:00pm–2:30pm"
+        "service_name": "St Albans Wellbeing Centre",
+        "location": "St Albans",
+        "address": "11 Hatfield Road, St Albans, AL1 3RR",
+        "email": "admin@mindinmidherts.org.uk",
+        "phone": "03303 208100",
+        "opening_hours": "Monday to Friday 10am–4pm",
+        "weekly_groups": [
+            {
+                "name": "Wellbeing Group",
+                "day": "Monday",
+                "time": "12:00pm–1:30pm"
+            },
+            {
+                "name": "Creative Writing Group",
+                "day": "Tuesday",
+                "time": "10:00am–11:30am"
+            },
+            {
+                "name": "Games Group",
+                "day": "Tuesday",
+                "time": "2:00pm–3:30pm"
+            },
+            {
+                "name": "Women's Group",
+                "day": "Wednesday",
+                "time": "10:30am–12:00pm"
+            },
+            {
+                "name": "Music Group",
+                "day": "Wednesday",
+                "time": "2:00pm–3:30pm"
+            },
+            {
+                "name": "Arts & Crafts Group",
+                "day": "Thursday",
+                "time": "10:00am–11:30am"
+            },
+            {
+                "name": "Wildlife Walking Group",
+                "day": "Thursday",
+                "time": "1:30pm–3:00pm"
+            },
+            {
+                "name": "Yoga with Giulia",
+                "day": "Thursday",
+                "time": "4:00pm–5:00pm"
+            },
+            {
+                "name": "Gardening Group",
+                "day": "TBC",
+                "time": "On hold until spring"
+            }
+        ],
+        "services": [
+            "Social Support Groups",
+            "Living Well courses and workshops for Recovery and Wellbeing",
+            "Counselling",
+            "Vocational Support",
+            "Outreach Support in St Albans and Surrounding Areas"
+        ],
+        "referral_process": "Fill in a referral form. Once processed, you will be invited to a 1-to-1 consultation with a team member to discuss support options.",
+        "notes": [
+            "Centre closed on Bank Holiday Monday 26th May.",
+            "Nightlight Crisis Café in Hatfield is open Friday to Monday, 7pm to 1am. Call 01923 256391 for urgent support.",
+            "This centre has limited disabled access."
+        ]
+    },
+    {
+        "service_name": "Stevenage Wellbeing Centre",
+        "location": "Stevenage",
+        "address": "Daneshill House, Danestrete, Stevenage, SG1 1HN (Access via Danesgate Road)",
+        "email": "admin@mindinmidherts.org.uk",
+        "phone": "03303 208100",
+        "opening_hours": "Monday to Friday 10am–5pm",
+        "weekly_groups": [
+            {
+                "name": "Men's Group",
+                "day": "Tuesday",
+                "time": "1:00pm–2:30pm"
+            },
+            {
+                "name": "LGBTQ+ Group",
+                "day": "Last Tuesday of the month",
+                "time": "4:00pm–7:00pm",
+                "link": "https://www.mindinmidherts.org.uk/support-for-you/our-wellbeing-centres/stevenage/lgbtq-support-group/"
+            },
+            {
+                "name": "Drop In",
+                "day": "Wednesday",
+                "time": "10:30am–12:00pm"
+            },
+            {
+                "name": "Arts & Crafts",
+                "day": "Thursday",
+                "time": "10:30am–12:00pm"
+            },
+            {
+                "name": "Women's Group",
+                "day": "Thursday",
+                "time": "1:00pm–2:30pm"
+            },
+            {
+                "name": "Mind Over Matter: Decluttering Support Group",
+                "day": "Wednesday",
+                "time": "1:00pm (from 9th April 2025)",
+                "duration": "12 weeks",
+                "description": "A 12-week support group helping people address clutter through practical and emotional strategies in a non-judgemental environment.",
+                "topics": [
+                    "Understanding causes and triggers of clutter",
+                    "Strategies for decluttering and organising your space",
+                    "Overcoming emotional attachment to items",
+                    "Self-care, setbacks, and sustaining progress"
+                ],
+                "who_is_it_for": "Anyone feeling overwhelmed by belongings or struggling to maintain an organised space.",
+                "registration_required": true
+            }
+        ],
+        "services": [
+            "Peer Support",
+            "Wellbeing Recovery",
+            "Arts and Crafts",
+            "Women’s Group",
+            "Men’s Group",
+            "Outreach services in Stevenage and surrounding areas",
+            "Counselling for adults and young people",
+            "Talking therapies"
+        ],
+        "referral_process": "Fill in a referral form. Once processed, you will be invited to a 1-to-1 consultation to discuss support options.",
+        "notes": [
+            "Centre closed on Bank Holiday Monday 26th May.",
+            "Nightlight Crisis Café in Hatfield is open Friday to Monday, 7pm to 1am. Call 01923 256391 for urgent support."
+        ]
     }
-  ],
-  "services": [
-    "Social Support Groups",
-    "One-to-one consultations after referral"
-  ],
-  "referral_process": "Fill in a referral form. Once processed, you will be invited to a 1-to-1 consultation with a team member to discuss support options.",
-  "notes": [
-    "Centre closed on Bank Holiday Monday 26th May.",
-    "Nightlight Crisis Café in Hatfield is open Friday to Monday, 7pm to 1am. Call 01923 256391 for urgent support."
-  ]
-},
-
-{
-  "service_name": "St Albans Wellbeing Centre",
-  "location": "St Albans",
-  "address": "11 Hatfield Road, St Albans, AL1 3RR",
-  "email": "admin@mindinmidherts.org.uk",
-  "phone": "03303 208100",
-  "opening_hours": "Monday to Friday 10am–4pm",
-  "weekly_groups": [
-    {
-      "name": "Wellbeing Group",
-      "day": "Monday",
-      "time": "12:00pm–1:30pm"
-    },
-    {
-      "name": "Creative Writing Group",
-      "day": "Tuesday",
-      "time": "10:00am–11:30am"
-    },
-    {
-      "name": "Games Group",
-      "day": "Tuesday",
-      "time": "2:00pm–3:30pm"
-    },
-    {
-      "name": "Women's Group",
-      "day": "Wednesday",
-      "time": "10:30am–12:00pm"
-    },
-    {
-      "name": "Music Group",
-      "day": "Wednesday",
-      "time": "2:00pm–3:30pm"
-    },
-    {
-      "name": "Arts & Crafts Group",
-      "day": "Thursday",
-      "time": "10:00am–11:30am"
-    },
-    {
-      "name": "Wildlife Walking Group",
-      "day": "Thursday",
-      "time": "1:30pm–3:00pm"
-    },
-    {
-      "name": "Yoga with Giulia",
-      "day": "Thursday",
-      "time": "4:00pm–5:00pm"
-    },
-    {
-      "name": "Gardening Group",
-      "day": "TBC",
-      "time": "On hold until spring"
-    }
-  ],
-  "services": [
-    "Social Support Groups",
-    "Living Well courses and workshops for Recovery and Wellbeing",
-    "Counselling",
-    "Vocational Support",
-    "Outreach Support in St Albans and Surrounding Areas"
-  ],
-  "referral_process": "Fill in a referral form. Once processed, you will be invited to a 1-to-1 consultation with a team member to discuss support options.",
-  "notes": [
-    "Centre closed on Bank Holiday Monday 26th May.",
-    "Nightlight Crisis Café in Hatfield is open Friday to Monday, 7pm to 1am. Call 01923 256391 for urgent support.",
-    "This centre has limited disabled access."
-  ]
-},
-
-{
-  "service_name": "Stevenage Wellbeing Centre",
-  "location": "Stevenage",
-  "address": "Daneshill House, Danestrete, Stevenage, SG1 1HN (Access via Danesgate Road)",
-  "email": "admin@mindinmidherts.org.uk",
-  "phone": "03303 208100",
-  "opening_hours": "Monday to Friday 10am–5pm",
-  "weekly_groups": [
-    {
-      "name": "Men's Group",
-      "day": "Tuesday",
-      "time": "1:00pm–2:30pm"
-    },
-    {
-      "name": "LGBTQ+ Group",
-      "day": "Last Tuesday of the month",
-      "time": "4:00pm–7:00pm",
-      "link": "https://www.mindinmidherts.org.uk/support-for-you/our-wellbeing-centres/stevenage/lgbtq-support-group/"
-    },
-    {
-      "name": "Drop In",
-      "day": "Wednesday",
-      "time": "10:30am–12:00pm"
-    },
-    {
-      "name": "Arts & Crafts",
-      "day": "Thursday",
-      "time": "10:30am–12:00pm"
-    },
-    {
-      "name": "Women's Group",
-      "day": "Thursday",
-      "time": "1:00pm–2:30pm"
-    },
-    {
-      "name": "Mind Over Matter: Decluttering Support Group",
-      "day": "Wednesday",
-      "time": "1:00pm (from 9th April 2025)",
-      "duration": "12 weeks",
-      "description": "A 12-week support group helping people address clutter through practical and emotional strategies in a non-judgemental environment.",
-      "topics": [
-        "Understanding causes and triggers of clutter",
-        "Strategies for decluttering and organising your space",
-        "Overcoming emotional attachment to items",
-        "Self-care, setbacks, and sustaining progress"
-      ],
-      "who_is_it_for": "Anyone feeling overwhelmed by belongings or struggling to maintain an organised space.",
-      "registration_required": true
-    }
-  ],
-  "services": [
-    "Peer Support",
-    "Wellbeing Recovery",
-    "Arts and Crafts",
-    "Women’s Group",
-    "Men’s Group",
-    "Outreach services in Stevenage and surrounding areas",
-    "Counselling for adults and young people",
-    "Talking therapies"
-  ],
-  "referral_process": "Fill in a referral form. Once processed, you will be invited to a 1-to-1 consultation to discuss support options.",
-  "notes": [
-    "Centre closed on Bank Holiday Monday 26th May.",
-    "Nightlight Crisis Café in Hatfield is open Friday to Monday, 7pm to 1am. Call 01923 256391 for urgent support."
-  ]
-}
-
-
 ]

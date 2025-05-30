@@ -1,7 +1,7 @@
 ```mermaid
 graph TD;
     A["Inbox Monitoring (Gmail API)"] --> B["Email Parsing & Preprocessing:<br>Extract body, subject, sender"]
-    B --> C["Location & Intent Classification:<br>e.g. Inquiry, Referral + Location"]
+    B --> C["Location & Intent Classification:<br>e.g. Inquiry, Location"]
     C --> D{"Needs Human Staff?"}
     
     D -- Yes --> E["Forward to Human Staff"]
