@@ -1,2 +1,4 @@
 .env
 project_documentation/
+# Ignore secrets folder
+secrets/
