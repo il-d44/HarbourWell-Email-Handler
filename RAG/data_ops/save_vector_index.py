@@ -4,7 +4,7 @@ import sys
 import faiss
 # Ensure the parent directory is in the path for module imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from RAG.embedding_vector_store import create_faiss_index_from_services
+from RAG.core.embedding_vector_store import create_faiss_index_from_services
 
 # load the saved embedded chunks from the JSONL file
 chunks = []

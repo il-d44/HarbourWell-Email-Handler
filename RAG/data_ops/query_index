@@ -4,21 +4,22 @@ import sys
 import faiss
 # Ensure the parent directory is in the path for module imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from RAG.embedding_vector_store import query_faiss_index, create_faiss_index_from_services
+from RAG.core.embedding_vector_store import query_faiss_index
 # load the saved embedded chunks from the JSONL file
 chunks = []
 with open("service_data/service_chunks.jsonl", "r") as f:
     for line in f:
         chunks.append(json.loads(line))
 
-
-# create the FAISS index from the embedded chunks
+# load the FAISS index from the file
 index = faiss.read_index("service_data/service_index.index")
 
 with open("service_data/id_to_metadata.json", "r") as f:
     id_to_metadata = json.load(f)
 
-query = "what services are available on a Tuesday near St. Albans?"
+    
+
+query = "what services are available on a Wednesday near Broxbourne?"
 # save the FAISS index to a file
 query_faiss_index(index, query, id_to_metadata, k=5)
 

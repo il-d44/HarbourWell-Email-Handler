@@ -43,7 +43,7 @@ def get_credentials():
             os.remove(temp_filepath)
 
         # Save token to file for future use
-        with open("token.json", "w") as token:
+        with open("secrets/token.json", "w") as token:
             token.write(creds.to_json())
 
     return creds

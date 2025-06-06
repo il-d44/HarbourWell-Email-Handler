@@ -1,108 +1,235 @@
 [
     {
       "location": "Broxbourne",
+      "address": "Broxbourne Community Centre, 1 High Street, Broxbourne, EN10 7HX",
+      "services": [
+                    "Depression Support",
+                    "Anxiety Support",
+                    "Bipolar Support",
+                    "LGBTQ+ Support",
+                    "Carers Support",
+                    "Cognitive Behavioral Therapy (CBT)",
+                    "Psychodynamic Counselling",
+                    "Intergrative Counselling",
+                    "Mindfulness-Based Therapy"
+                  ],
+      "phone": "01279 123456",
+      "email": "broxboure_centre@harbourwell.org.uk",
+      "opening_hours": "Monday to Friday, 9:00am–8:00pm",
       "support_groups": [
         {
           "name": "Depression Support",
           "day": "Monday",
           "time": "6:30pm–8:00pm",
-          "description": "Support group for individuals experiencing depression, offering peer-led discussion and coping strategies."
+          "description": "a support group for individuals experiencing depression, offering peer-led discussion and coping strategies."
         },
         {
           "name": "Anxiety Support",
           "day": "Tuesday",
           "time": "1:00pm–2:30pm",
-          "description": "Group focused on managing anxiety symptoms through mindfulness and cognitive-behavioral techniques."
+          "description": "a group focused on managing anxiety symptoms through mindfulness and cognitive-behavioral techniques."
         },
         {
           "name": "Bipolar Support",
           "day": "Wednesday",
           "time": "1:30pm–3:00pm",
-          "description": "A safe space for those living with bipolar disorder to share experiences and learn mood management skills."
+          "description": "a safe space for those living with bipolar disorder to share experiences and learn mood management skills."
         },
         {
           "name": "LGBTQ+ Support",
           "day": "Thursday",
           "time": "6:30pm–8:00pm",
-          "description": "A welcoming support group addressing mental health challenges within the LGBTQ+ community."
+          "description": "a welcoming support group addressing mental health challenges within the LGBTQ+ community."
         },
         {
           "name": "Carers Support",
           "day": "Friday",
           "time": "1:00pm–2:30pm",
-          "description": "Support for carers providing mental or physical health care, focusing on self-care and coping strategies."
+          "description": "a support group for carers providing mental or physical health care, focusing on self-care and coping strategies."
         }
-      ]
+                        ],
+      "counselling_services": [
+        {
+          "name": "Cognitive Behavioral Therapy (CBT)",
+          "description": "CBT is a structured, time-limited therapy that helps individuals identify and change negative thought patterns and behaviors.",
+          "availability": "Monday to Friday, 9:00am–5:00pm"
+        }, 
+        {
+          "name": "Psychodynamic Counselling",
+          "description": "This therapy explores unconscious processes and past experiences to help individuals understand their current behavior and emotions.",
+          "availability": "Monday to Wednesday, 9:00am–1:30pm"
+        },
+        {
+          "name": "Intergrative Counselling",
+          "description": "This therapy is a flexible approach that combines different therapeutic techniques to suit the individual's needs.",
+          "availability": "Tuesday to Thursday, 9:00am–1:30pm"
+        },
+        {
+          "name": "Mindfulness-Based Therapy",
+          "description": "This is a therapeutic approach that incorporates mindfulness practices to help individuals manage stress and anxiety.",
+          "availability": "Thursday to Friday, 9:00am–5:00pm"
+        }
+        ]
     },
     {
       "location": "Harlow",
+      "address": "Harlow Community Centre, 2 Market Square, Harlow, CM20 1HA",
+      "services": [
+                    "Depression Support",
+                    "Substance Abuse Support",
+                    "Eating Disorders Support",
+                    "Cognitive Behavioral Therapy (CBT)",
+                    "Psychodynamic Counselling",
+                    "Integrative Counselling",
+                    "Mindfulness-Based Therapy"
+                  ],
+      "phone": "01279 654321",
+      "email": "harlow_centre@harbourwell.org.uk",
+      "opening_hours": "Monday to Friday, 9:00am–9:00pm",
       "support_groups": [
         {
           "name": "Depression Support",
           "day": "Wednesday",
-          "time": "19:30–21:00",
-          "description": "Support group for individuals experiencing depression, offering peer-led discussion and coping strategies."
+          "time": "7.30pm-9:00pm",
+          "description": "a support group for individuals experiencing depression, offering peer-led discussion and coping strategies."
         },
         {
           "name": "Substance Abuse Support",
           "day": "Thursday",
           "time": "10:00am–11:30am",
-          "description": "A group for individuals recovering from substance abuse, focusing on relapse prevention and support."
+          "description": "a group for individuals recovering from substance abuse, focusing on relapse prevention and support."
         },
         {
           "name": "Eating Disorders Support",
           "day": "Friday",    
           "time": "1:30pm–3:00pm",
-          "description": "Support for individuals dealing with eating disorders, providing a safe space for sharing and recovery strategies."
+          "description": "a support group for individuals dealing with eating disorders, providing a safe space for sharing and recovery strategies."
          
         }
-      ]
+      ],
+        "counselling_services": [
+            {
+            "name": "Cognitive Behavioral Therapy (CBT)",
+            "description": "CBT is a structured, time-limited therapy that helps individuals identify and change negative thought patterns and behaviors.",
+            "availability": "Monday to Friday, 9:00am–5:00pm"
+            },
+            {
+            "name": "Psychodynamic Counselling",
+            "description": "This therapy explores unconscious processes and past experiences to help individuals understand their current behavior and emotions.",
+            "availability": "Wednesday to Friday, 1:30pm-5:00pm"
+            },
+            {
+            "name": "Integrative Counselling",
+            "description": "This a flexible approach that combines different therapeutic techniques to suit the individual's needs.",
+            "availability": "Monday to Friday, 9:00am–5:00pm"
+            },
+            {
+            "name": "Mindfulness-Based Therapy",
+            "description": "This is a therapeutic approach that incorporates mindfulness practices to help individuals manage stress and anxiety.",
+            "availability": "Tuesday to Thursday, 9:00am–5:00pm"
+            }
+        ]
     },
     {
       "location": "Waltham Cross",
+      "address": "Waltham Cross Community Centre, 3 High Street, Waltham Cross, EN8 7BZ",
+      "services": [
+                    "Depression Support",
+                    "Anxiety Support",
+                    "Bipolar Support",
+                    "Carers Support",
+                    "Cognitive Behavioral Therapy (CBT)",
+                    "Group Therapy"
+                 ],
+        "phone": "01279 789012",
+        "email": "waltham_cross_centre@harbourwell.org.uk",
+        "opening_hours": "Monday to Friday, 9:00am–6:00pm",
       "support_groups": [
         {
           "name": "Anxiety Support",
           "day": "Thursday",
           "time": "10:30am–2:30pm",
-          "description": "Group focused on managing anxiety symptoms through mindfulness and cognitive-behavioral techniques."
+          "description": "a group focused on managing anxiety symptoms through mindfulness and cognitive-behavioral techniques."
         },
         {
           "name": "Bipolar Support",
           "day": "Friday",
           "time": "1:30pm–3:00pm",
-          "description": "A safe space for those living with bipolar disorder to share experiences and learn mood management skills."
+          "description": "a safe space for those living with bipolar disorder to share experiences and learn mood management skills."
         },
         {
           "name": "Carers Support",
           "day": "Monday",
           "time": "1:00pm–2:30pm",
-          "description": "Support for carers providing mental or physical health care, focusing on self-care and coping strategies."
+          "description": "a support group for carers providing mental or physical health care, focusing on self-care and coping strategies."
         }
-      ]
+      ],
+        "counselling_services": [
+            {
+            "name": "Cognitive Behavioral Therapy (CBT)",
+            "description": "CBT is a structured, time-limited therapy that helps individuals identify and change negative thought patterns and behaviors.",
+            "availability": "Monday to Friday, 9:00am–5:00pm"
+            },
+            {
+            "name": "Group Therapy",
+            "description": "This is a therapeutic approach that involves group sessions to discuss and address common mental health issues.",   
+            "availability": "Monday to Friday, 9:00am–5:00pm"
+            }            
+        ]
     },
     {
       "location": "Cheshunt",
+      "address": "Cheshunt Community Centre, 4 Church Lane, Cheshunt, EN8 9XH",
+      "services": [
+                        "Depression Support",
+                        "Anxiety Support",
+                        "Bipolar Support",
+                        "LGBTQ+ Support",
+                        "Carers Support",
+                        "Cognitive Behavioral Therapy (CBT)",
+                        "Person-Centered Therapy",
+                        "Mindfulness-Based Therapy"
+                     ],
+        "phone": "01279 345678",
+        "email": "cheshunt_centre@harbourwell.org.uk",
+        "opening_hours": "Monday to Friday, 9:00am–8:00pm",
       "support_groups": [
         {
           "name": "Depression Support",
           "day": "Tuesday",
           "time": "6:00pm–8:00pm",
-          "description": "Support group for individuals experiencing depression, offering peer-led discussion and coping strategies."
+          "description": "a support group for individuals experiencing depression, offering peer-led discussion and coping strategies."
         },
         {
           "name": "Anxiety Support",
           "day": "Wednesday",
           "time": "1:00pm–2:30pm",
-          "description": "Group focused on managing anxiety symptoms through mindfulness and cognitive-behavioral techniques."
+          "description": "a group focused on managing anxiety symptoms through mindfulness and cognitive-behavioral techniques."
         },
         {
           "name": "Bipolar Support",
           "day": "Wednesday",
           "time": "1:30pm–3:00pm",
-          "description": "A safe space for those living with bipolar disorder to share experiences and learn mood management skills."
+          "description": "a safe space for those living with bipolar disorder to share experiences and learn mood management skills."
         }
-      ]
+      ],
+        "counselling_services": [
+        {
+            "name": "Cognitive Behavioral Therapy (CBT)",
+            "description": "CBT is a structured, time-limited therapy that helps individuals identify and change negative thought patterns and behaviors.",
+            "availability": "Monday to Friday, 9:00am–5:00pm"
+        },
+        {
+            "name": "Person-Centered Therapy",
+            "description": "This therapy focuses on providing a supportive environment where individuals can explore their feelings and experiences.",
+            "availability": "Monday to Wednesday, 9:00am–1:30pm"
+        },
+        {
+            "name": "Mindfulness-Based Therapy",
+            "description": "This is a therapeutic approach that incorporates mindfulness practices to help individuals manage stress and anxiety.",
+            "availability": "Tuesday to Thursday, 9:00am–5:00pm"
+        }
+    ]
     }
   ]
   
