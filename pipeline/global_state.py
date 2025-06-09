@@ -5,11 +5,10 @@ from typing import Optional
 class Global_State:
     email: Optional[dict] = None
     category: Optional[str] = None
+    retrieved_chunks: Optional[list] = None
     draft_reply: Optional[str] = None 
     status: Optional[str] = "start"
     error: Optional[str] = None
-
-
 
 
 

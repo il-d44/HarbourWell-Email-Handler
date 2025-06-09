@@ -9,15 +9,15 @@ from agents.exceptions import EmailClassificationAPIError
 
 
 class ClassifyAgent:
-    def __init__(self, llmclient):
-        self.llm = llmclient
+    def __init__(self, llm_client):
+        self.llm = llm_client
 
     def classify_email(self, state: "Global_State") -> "Global_State":
         if not state.email:
             raise ValueError("No email data found in the state")
         
         prompt = f"""
-        You are an assistant for a Mental Health Wellbeing organisation that classifies emails into categories.
+        You are an assistant for a mental health wellbeing organisation that classifies emails into categories.
         Classify the following email into one of the categories below.
 
         Email:

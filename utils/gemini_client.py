@@ -1,4 +1,3 @@
-# pyright: ignore
 import google.generativeai as genai
 from dotenv import load_dotenv  
 import os
@@ -10,9 +9,13 @@ class GeminiClient:
         self.api_key = api_key or os.getenv("GEMINI_API_KEY")
         if not self.api_key:
             raise ValueError("API key must be provided or set in GEMINI_API_KEY environment variable")
-        genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-1.5-pro-latest')
+        genai.configure(api_key=api_key)  # type: ignore
+        self.model = genai.GenerativeModel('gemini-1.5-pro-latest')  # type: ignore
+
 
     def generate(self, prompt: str) -> str:
         response = self.model.generate_content(prompt)
         return response.text.strip()
+    
+
+        

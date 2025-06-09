@@ -1,7 +1,7 @@
 from google import genai
 from dotenv import load_dotenv  
 import os
-load_dotenv()  # Load environment variables from .env file
+load_dotenv()
 
 """A client for interacting with the Gemini API for text embeddings."""
 class GeminiEmbeddingClient:
@@ -20,10 +20,5 @@ class GeminiEmbeddingClient:
             model=self.model_name,
             contents=text,
         )
-        return result.embeddings[0].values
+        return result.embeddings[0].values #type: ignore
         
-text = "This is a sample text to be embedded."
-if __name__ == "__main__":
-    client = GeminiEmbeddingClient()
-    embedding = client.embed(text)
-    print(f"Embedding for the text: {embedding}")
