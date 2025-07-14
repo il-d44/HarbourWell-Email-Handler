@@ -14,9 +14,6 @@ The goal of this application is to harness AI technology to reduce administrativ
 
 ![Inbox view of the Email Handling System](images/UI_Screenshot_1.1.png)
 
-## Pipeline Flow (Mermaid Diagram)
-
-<pre> ```mermaid flowchart TD A[Start] --> B[Process] --> C[End] ``` </pre>
 
 ## Disclaimer 
 
