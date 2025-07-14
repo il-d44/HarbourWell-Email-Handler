@@ -1,4 +1,9 @@
 .env
-project_documentation/
-# Ignore secrets folder
 secrets/
+secrets/token.json
+secrets/credentials.json
+__pycache__/
+tests
+tests/test_classify_agent.py
+tests/test_classify_agent.py
+.venv

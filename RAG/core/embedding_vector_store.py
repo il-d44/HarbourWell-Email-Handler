@@ -1,67 +1,70 @@
+"""
+This module handles embedding text chunks, creating a FAISS index from them,
+and querying the index for the most relevant matches using vector similarity.
+"""
+
 import numpy as np
 import faiss
 import os
-import sys  
-# Ensure the parent directory is in the path for module imports
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import sys
+from typing import List, Tuple, Dict, Any
+
+
+# Add parent directory to fix import issues
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from utils.gemini_embedding_client import GeminiEmbeddingClient
 
-def embed_chunks(service_chunks):
-    embeddings = []
-    for chunk in service_chunks:
-        client = GeminiEmbeddingClient()
-        embeddings.append({
-            "embedding": client.embed(chunk['text']), 
-            "metadata": chunk['metadata'],
-            "text": chunk['text']})
-    return embeddings
 
-def create_faiss_index_from_services(chunks):
+def embed_chunks(service_chunks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
-    Create a FAISS index from loaded chunks.
+    Generate embeddings for each text chunk using the GeminiEmbeddingClient.
 
     Args:
-        chunks (list): A list of dictionaries, each containing a text chunk and its associated metadata.
-    Returns:
-        tuple: A tuple containing the FAISS index and a list of dictionaries mapping IDs to metadata.
-     """
-    all_embeddings = []
-    id_to_metadata = []
+        service_chunks (list): List of dictionaries, each with 'text' and 'metadata'.
 
-    
-    for chunk in chunks:
-        all_embeddings.append(chunk['embedding'])
-        id_to_metadata.append({
-            'metadata': chunk.get('metadata'),
-            'text': chunk.get('text'),
-            'embedding': chunk.get('embedding') 
+    Returns:
+        list: List of dictionaries, each with 'embedding', 'text', and 'metadata'.
+    """
+    client = GeminiEmbeddingClient()
+    embedded = []
+
+    for chunk in service_chunks:
+        embedded.append({
+            "embedding": client.embed(chunk["text"]),
+            "text": chunk["text"],
+            "metadata": chunk["metadata"],
         })
 
-    embedding_matrix = np.array(all_embeddings).astype('float32')
+    return embedded
+
+
+
+def create_faiss_index_from_services(
+    chunks: List[Dict[str, Any]]
+) -> Tuple[faiss.IndexFlatL2, List[Dict[str, Any]]]:
+    """
+    Create a FAISS index from embedded service chunks.
+
+    Args:
+        chunks (list): List of dictionaries with 'embedding', 'text', and 'metadata'.
+
+    Returns:
+        tuple: (FAISS index, List of ID-to-metadata mappings)
+    """
+    all_embeddings = [chunk["embedding"] for chunk in chunks]
+    id_to_metadata = [{
+        "embedding": chunk["embedding"],
+        "text": chunk["text"],
+        "metadata": chunk["metadata"]
+    } for chunk in chunks]
+
+    embedding_matrix = np.array(all_embeddings).astype("float32")
     dimension = embedding_matrix.shape[1]
 
     index = faiss.IndexFlatL2(dimension)
-    index.add(embedding_matrix) #type: ignore
+    index.add(embedding_matrix)  # type: ignore
 
     return index, id_to_metadata
 
-def query_faiss_index(index, query, id_to_metadata, k=5):
-    """
-    Query the FAISS index with a given embedding.
 
-    Args:
-        index (faiss.Index): The FAISS index to query.
-        query_embedding (list): The embedding to query the index with.
-        k (int): The number of nearest neighbors to return.
-    Returns:
-        None: Prints the matched results and their metadata.
-    """
-    client = GeminiEmbeddingClient()
-    query_embedding = client.embed(query)
-    query_vector = np.array(query_embedding).astype('float32').reshape(1, -1)
-    _, indices = index.search(query_vector, k)
-    for idx in indices[0]:
-        result = id_to_metadata[idx]
-        print("Match:", result["text"])
-        print("Metadata:", result["metadata"])
-        print("-" * 50)
+

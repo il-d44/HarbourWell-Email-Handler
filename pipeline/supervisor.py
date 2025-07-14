@@ -1,57 +1,55 @@
-import os
-import sys
+from typing import TYPE_CHECKING
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+if TYPE_CHECKING:
+    from pipeline.global_state import Global_State
+    from agents.classify_agent import ClassifyAgent
+    from agents.rag_agent import RAGAgent
+    from agents.draft_response_agent import DraftResponseAgent
 
-from pipeline.global_state import Global_State 
-from agents.classify_agent import classify_email
-from agents.draft_response_agent import draft_response
+def run_supervisor_step(
+    state: "Global_State",
+    classify_agent: "ClassifyAgent",
+    rag_agent: "RAGAgent",
+    draft_response_agent: "DraftResponseAgent",
+) -> "Global_State":
+    """
+    Supervises a single step in the email processing pipeline by coordinating 
+    classification, chunk retrieval, and draft response generation.
 
-"""This supervisor function uses logical conditions to execute individual nodes in the desired order"""
-def supervisor(state: Global_State):
-    try:
-        # Classify email node
-        if state.status == "start":
-            print("Classifying email...")
-            state = classify_email(state)
-        # Draft response node 
+    This function is intended to be called iteratively in the main application loop.
+    It updates the pipeline state based on the current processing status.
+
+    Args:
+        state (Global_State): Current global state of the pipeline.
+        classify_agent (ClassifyAgent): Agent responsible for classifying the email.
+        rag_agent (RAGAgent): Agent responsible for retrieving relevant text chunks.
+        draft_response_agent (DraftResponseAgent): Agent responsible for drafting the email reply.
+
+    Returns:
+        Global_State: Updated state after processing this step.
+    """
+    if state.status == "email_unprocessed":
+        # Classify the email to determine the category
+        state = classify_agent.classify_email(state)
+
         if state.status == "classified":
-            print(f"Category: {state.category}")
-            print("Generating draft response...")
-            state = draft_response(state)
+            if state.category == "routine enquiry":
+                # Retrieve relevant chunks for routine enquiries
+                state.status = "retrieving_chunks"
+                state = rag_agent.retrieve_relevant_chunks(state)
 
-        # Trigger human review
-        if state.status == "draft_ready":
-            print("Draft ready for review:")
-            print("→", state.draft_reply)
-            state.status = "awaiting_approval"
-
-            # Ask user for approval
-            while True:
-                decision = input("Do you want to send this draft? Type 'yes' to approve or 'no' to reject: ").strip().lower()
-                if decision in ['yes', 'no']:
-                    break
-                print("Please enter 'yes' or 'no'.")
-
-            if decision == "yes":
-                state.status = "approved"
-                print("✅ Email sent!")
+                # If chunks are retrieved, draft a response
+                if state.status == "chunks_retrieved":
+                    # Draft the response based on retrieved chunks
+                    state = draft_response_agent.draft_response(state)
             else:
-                state.status = "rejected"
-                print("💾 Email saved to drafts.")
+                # Placeholder for other category handling logic
+                state.status = "skipped"
+                print("Category logic not yet implemented")
 
+    else:
+        # Unexpected status indicates a processing error
+        state.error == "Unexpected status when attepting to categorise email"
+        print("Error: Unexpected status when attepting to categorise email")
 
-        
-
-    except Exception as e:
-        state.error = str(e)
-        state.status = "error"
-        print("Error occurred:", e)
-
-
-state = Global_State(
-    email_body="Hi, I'd like to know more about your courses, please send me some info.",
-    status="start"
-)
-
-supervisor(state)
+    return state

@@ -1,6 +1,7 @@
 import os
 
-EXCLUDED = {'.venv', '.git'}  # Add more folder names here to exclude
+EXCLUDED = {".venv", ".git"}  # Add more folder names here to exclude
+
 
 def print_tree(root, prefix=""):
     for item in sorted(os.listdir(root)):
@@ -10,5 +11,6 @@ def print_tree(root, prefix=""):
         if os.path.isdir(path):
             print(f"{prefix}├── {item}")
             print_tree(path, prefix + "│   ")
+
 
 print_tree(".")
