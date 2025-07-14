@@ -14,9 +14,9 @@ The goal of this application is to harness AI technology to reduce administrativ
 
 ![Inbox view of the Email Handling System](images/UI_Screenshot_1.1.png)
 
-## 🧭 Pipeline Flow (Mermaid Diagram)
+## Pipeline Flow (Mermaid Diagram)
 
-<pre> ```mermaid flowchart TD A[Unread Email from Gmail] --> B[InboxAgent] B --> C[ClassifyAgent] C -->|Routine Enquiry| D[RAGAgent<br>Vector Search] D --> E[DraftResponseAgent] E --> F[Drafted Response Shown in UI] F --> G{User Approves?} G -- Yes --> H[Mark Complete / Archive Email] G -- No --> I[Skip to Next Email] C -->|Other Category| J[Skipped / Future Logic] ``` </pre>
+<pre> ```mermaid flowchart TD A[Start] --> B[Process] --> C[End] ``` </pre>
 
 ## Disclaimer 
 
